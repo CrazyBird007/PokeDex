@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+        rel="stylesheet">
+    <script src="script-bigCard.js"></script>
+    <script src="script-smallCards.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-bigCard.css">
+    <link rel="stylesheet" href="style-smallCards.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="./img/pokeball.png">
+    <title>Pokedex</title>
+</head>
+
+<body onload="init()">
+
+    <header>
+        <a href="#footer" class="center-pokedex-img">
+            <img class="responsive-header-img" src="./img/pokeball.png" alt="pokeball-img">
+            <img class="responsive-header-img" src="./img/Pokedex-small.png" alt="pokedex-img">
+        </a>
+        <div class="pokedex-logo">
+            <input type="text" placeholder="Search Pokemon" id="search" onkeyup="filterNames()">
+        </div>
+    </header>
+
+    <section>
+        <div id="mainPokedex">
+        </div>
+        <div id="loadMorePokemon">
+            <button id="hideButton" onclick="renderMainPokedex()">Mehr Pokémon laden.</button>
+            <span id="showLoadedPokemon"></span>
+        </div>
+    </section>
+
+    <section id="hidePokemonCard" class="d-none" onclick="hide()">
+        <div id="bigPokedexBg">
+        </div>
+    </section>
+
+    <footer id="footer">
+        <a href="#" class="smaller-pokeball-img">
+            <img src="./img/pokeball.png" alt="">
+            <img src="./img/goToTop.png" alt="">
+        </a>
+        <div class="copyright">
+            <span>(c) Albert 2023&nbsp;</span>
+            <a class="credits" href="credits.html">Credits</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

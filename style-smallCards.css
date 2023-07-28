@@ -1,0 +1,84 @@
+/* pokedex all small card settings */
+#mainPokedex {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    align-items: center;
+    min-height: 70vh;
+}
+
+@media (max-width: 517px) {
+    #mainPokedex {
+        margin-top: 150px;
+    }
+}
+
+.pokemonCard {
+    /* border: 1px solid rgb(233, 49, 49); */
+    display: flex;
+    width: 250px;
+    height: 350px;
+    margin: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: rgb(42, 40, 41);
+    cursor: pointer;
+    transition: 125ms;
+}
+
+.pokemonCard:hover {
+    transform: scale(1.1);
+}
+
+.pokemonCard img {
+    max-height: 140px;
+    max-width: 140px;
+    object-fit: cover;
+    margin-top: 30px;
+    transition: transform 0.5s;
+}
+
+.pokemonCard img:hover {
+    transform: scale(1.5);
+}
+
+.backgroundImage {
+    display: flex;
+    border-radius: 100px;
+    background: linear-gradient(to bottom, rgb(95, 91, 92) 0%, rgb(42, 40, 41) 85%);
+    height: 200px;
+    width: 200px;
+}
+
+.centerImg {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#loadMorePokemon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+    margin-top: 44px;
+    flex-direction: column;
+}
+
+#showLoadedPokemon {
+    color: orange;
+}
+
+#loadMorePokemon button {
+    padding: 16px;
+    font-size: 20px;
+    background-color: orange;
+    border-radius: 10px;
+    transition: 225ms;
+    cursor: pointer;
+}
+
+#loadMorePokemon button:hover {
+    transform: scale(1.1);
+}
